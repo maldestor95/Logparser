@@ -1,21 +1,67 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget , QLabel , QToolTip , QPushButton 
-from PyQt5.QtWidgets import QMessageBox, QTextEdit, QGridLayout, QLineEdit,QInputDialog, QMainWindow, QAction
+from PyQt5.QtWidgets import QMessageBox, QTextEdit, QGridLayout, QLineEdit,QInputDialog, QMainWindow, QAction,QFileDialog
 from PyQt5.QtCore import QRegExp,pyqtSlot
 from PyQt5.QtGui import QIcon, QFont, QTextDocument, QTextCursor
+# from PyQt5.QtQuick import 
 import os,re
 from PyQt5 import QtCore
 
-class App(QWidget):
-    keyPressed = QtCore.pyqtSignal(QtCore.QEvent)
+class MainW(QMainWindow):
+    """docstring for ClassName"""
     def __init__(self):
         super().__init__()
+        self.initUI()
+
+    def initUI(self):
+        layout = QGridLayout()
+        self.logApp=Logger(self)
+        layout.addWidget(self.logApp,1,0,1,1)
+        self.setGeometry(0, 0, 800, 480)
+        self.setWindowTitle('Statusbar')    
+        
+        mainMenu = self.menuBar()
+
+        fileMenu = mainMenu.addMenu('File')
+        editMenu = mainMenu.addMenu('Edit')
+        viewMenu = mainMenu.addMenu('View')
+        searchMenu = mainMenu.addMenu('Search')
+        toolsMenu = mainMenu.addMenu('Tools')
+        helpMenu = mainMenu.addMenu('Help')
+         
+        openButton = QAction(QIcon('exit24.png'), 'Open', self)
+        openButton.setShortcut('Ctrl+O')
+        openButton.setStatusTip('Open Log')
+        openButton.triggered.connect(self.OpenFile)
+        fileMenu.addAction(openButton)
+        
+        exitButton = QAction(QIcon('exit24.png'), 'Exit', self)
+        exitButton.setShortcut('Ctrl+Q')
+        exitButton.setStatusTip('Exit application')
+        exitButton.triggered.connect(self.close)
+        fileMenu.addAction(exitButton)
+
+        self.show()
+
+    def OpenFile(self):
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        fileName, _ = QFileDialog.getOpenFileName(self,"QFileDialog.getOpenFileName()", "","All Files (*);;Python Files (*.py)", options=options)
+        if fileName:
+            Fr=open(fileName,"r")
+            self.logApp.SourceDoc=QTextDocument(Fr.read())
+            self.logApp.qTE.setDocument(self.logApp.SourceDoc)
+
+class Logger(QWidget):
+    keyPressed = QtCore.pyqtSignal(QtCore.QEvent)
+    def __init__(self,parent):
+        super().__init__(parent)
         self.title = 'LogParser'
         self.setWindowIcon(QIcon('web.png'))
-        self.left = 10
-        self.top = 50
-        self.width = 640
-        self.height = 480
+        self.left = parent.frameGeometry().left()
+        self.top = parent.frameGeometry().top()+10
+        self.width = parent.frameGeometry().width()
+        self.height = parent.frameGeometry().height()
         self.openlog('t.log')
         self.initUI()
         self.keyPressed.connect(self.on_key)
@@ -23,20 +69,6 @@ class App(QWidget):
     def initUI(self):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
-
-        # mainMenu = self.menuBar()
-        # fileMenu = mainMenu.addMenu('File')
-        # editMenu = mainMenu.addMenu('Edit')
-        # viewMenu = mainMenu.addMenu('View')
-        # searchMenu = mainMenu.addMenu('Search')
-        # toolsMenu = mainMenu.addMenu('Tools')
-        # helpMenu = mainMenu.addMenu('Help')
-         
-        # exitButton = QAction(QIcon('exit24.png'), 'Exit', self)
-        # exitButton.setShortcut('Ctrl+Q')
-        # exitButton.setStatusTip('Exit application')
-        # exitButton.triggered.connect(self.close)
-        # fileMenu.addAction(exitButton)
 
         QToolTip.setFont(QFont('SansSerif', 10))
         self.setToolTip('This is a <b>QWidget</b> widget')
@@ -171,28 +203,28 @@ class App(QWidget):
             Fr=open(File_Path,"r")
             self.SourceDoc=QTextDocument(Fr.read())
 
-class inputdialogdemo(QWidget):
-   def __init__(self, parent = App):
-      super(inputdialogdemo, self).__init__(parent)
+# class inputdialogdemo(QWidget):
+#    def __init__(self, parent = Logger):
+#       super(inputdialogdemo, self).__init__(parent)
         
-      layout = QFormLayout()
+#       layout = QFormLayout()
 
-      self.le = QLineEdit()
-      self.btn = QPushButton("Filter")
-      self.btn.clicked.connect(self.getFilter)  
-      layout.addRow(self.le,self.btn)
+#       self.le = QLineEdit()
+#       self.btn = QPushButton("Filter")
+#       self.btn.clicked.connect(self.getFilter)  
+#       layout.addRow(self.le,self.btn)
         
-   def getFilter(self):
-      items = ("C", "C++", "Java", "Python")
+#    def getFilter(self):
+#       items = ("C", "C++", "Java", "Python")
         
-      item, ok = QInputDialog.getItem(self, "select input dialog", 
-         "list of languages", items, 0, False)
+#       item, ok = QInputDialog.getItem(self, "select input dialog", 
+#          "list of languages", items, 0, False)
             
-      if ok and item:
-         self.le.setText(item)
+#       if ok and item:
+#          self.le.setText(item)
         
 
 if __name__ == '__main__':
   app = QApplication(sys.argv)
-  ex = App()
+  ex = MainW()
   sys.exit(app.exec_())
