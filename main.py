@@ -1,6 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget , QLabel , QToolTip , QPushButton , QMessageBox, QTextEdit, QGridLayout, QLineEdit,QInputDialog
-from PyQt5.QtCore import QRegExp
+from PyQt5.QtWidgets import QApplication, QWidget , QLabel , QToolTip , QPushButton 
+from PyQt5.QtWidgets import QMessageBox, QTextEdit, QGridLayout, QLineEdit,QInputDialog, QMainWindow, QAction
+from PyQt5.QtCore import QRegExp,pyqtSlot
 from PyQt5.QtGui import QIcon, QFont, QTextDocument, QTextCursor
 import os,re
 from PyQt5 import QtCore
@@ -22,6 +23,20 @@ class App(QWidget):
     def initUI(self):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
+
+        # mainMenu = self.menuBar()
+        # fileMenu = mainMenu.addMenu('File')
+        # editMenu = mainMenu.addMenu('Edit')
+        # viewMenu = mainMenu.addMenu('View')
+        # searchMenu = mainMenu.addMenu('Search')
+        # toolsMenu = mainMenu.addMenu('Tools')
+        # helpMenu = mainMenu.addMenu('Help')
+         
+        # exitButton = QAction(QIcon('exit24.png'), 'Exit', self)
+        # exitButton.setShortcut('Ctrl+Q')
+        # exitButton.setStatusTip('Exit application')
+        # exitButton.triggered.connect(self.close)
+        # fileMenu.addAction(exitButton)
 
         QToolTip.setFont(QFont('SansSerif', 10))
         self.setToolTip('This is a <b>QWidget</b> widget')
