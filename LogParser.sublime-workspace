@@ -1,0 +1,686 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"i",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"std",
+				"stdout\tinstance"
+			],
+			[
+				"ele",
+				"Element\tclass"
+			],
+			[
+				"el",
+				"Element\tclass"
+			],
+			[
+				"to",
+				"tostring\tfunction"
+			],
+			[
+				"ge",
+				"getroot\tfunction"
+			],
+			[
+				"cc",
+				"createPlacemark"
+			],
+			[
+				"p",
+				"print"
+			],
+			[
+				"E",
+				"ElementTree"
+			],
+			[
+				"exp",
+				"ExportListToCsv"
+			],
+			[
+				"a",
+				"abspath\tfunction"
+			],
+			[
+				"Ex",
+				"ExportListToCsv"
+			],
+			[
+				"is",
+				"isfile\tfunction"
+			],
+			[
+				"as",
+				"assert_\tstatement"
+			],
+			[
+				"get",
+				"GetPictureList\tfunction"
+			],
+			[
+				"di",
+				"dirname"
+			],
+			[
+				"e",
+				"EXIFEXTRACTOR\tclass"
+			],
+			[
+				"pa",
+				"path\tmodule"
+			],
+			[
+				"Res",
+				"Res1\tstatement"
+			],
+			[
+				"cl",
+				"classmethod\tclass"
+			],
+			[
+				"c",
+				"cls"
+			],
+			[
+				"setUp",
+				"setUpClass\tfunction"
+			],
+			[
+				"pi",
+				"PicPath\tstatement"
+			],
+			[
+				"Ab",
+				"Absolute_src_path\tparam"
+			],
+			[
+				"Exif",
+				"ExifLib\tmodule"
+			],
+			[
+				"ass",
+				"assertEqual\tfunction"
+			],
+			[
+				"ex",
+				"exiv2path\tstatement"
+			],
+			[
+				"abs",
+				"Absolute_src_path"
+			],
+			[
+				"exi",
+				"exiv2path"
+			],
+			[
+				"Exi",
+				"exiv2path"
+			],
+			[
+				"v",
+				"values"
+			],
+			[
+				"PIC",
+				"PICname"
+			],
+			[
+				"pat",
+				"pathexiv2"
+			],
+			[
+				"load_",
+				"load_dir"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"src",
+				"srcpath"
+			],
+			[
+				"pro",
+				"proj"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"analyse",
+				"analysefile"
+			],
+			[
+				"analys",
+				"analysefile"
+			],
+			[
+				"modul",
+				"module.exports"
+			],
+			[
+				"stat",
+				"fs.stat"
+			],
+			[
+				"fs",
+				"fs.chmod"
+			],
+			[
+				"consol",
+				"console"
+			],
+			[
+				"convertL",
+				"convertLatitude"
+			],
+			[
+				"GP",
+				"GPSres"
+			],
+			[
+				"GPS",
+				"GPSLongitude"
+			],
+			[
+				"con",
+				"convertLongitude"
+			],
+			[
+				"File",
+				"filename"
+			],
+			[
+				"lao",
+				"loadJSON"
+			],
+			[
+				"ana",
+				"analysefolder"
+			],
+			[
+				"J",
+				"JList"
+			],
+			[
+				"fil",
+				"FileName"
+			],
+			[
+				"an",
+				"analysefolder"
+			],
+			[
+				"fi",
+				"FileName"
+			],
+			[
+				"Tes",
+				"testFolder"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"test",
+				"testFolder"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ana",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"LO",
+				"Log Highlight: Generate Custom Syntax & Theme"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"log ",
+				"Log Highlight: Erase Custom Syntax & Theme"
+			],
+			[
+				"log",
+				"Log Highlight: Generate Custom Syntax & Theme"
+			],
+			[
+				"gene",
+				"Log Highlight: Generate Custom Syntax & Theme"
+			],
+			[
+				"log in",
+				"Log Highlight: Highlight Error/Warning"
+			],
+			[
+				"lo",
+				"Log Highlight: Generate Custom Syntax & Theme"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"searc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"an",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"Package Control: se",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: li",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: se\t",
+				"Package Control: Discover Packages"
+			],
+			[
+				"anaconda ",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"Anaconda: di",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: \t",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: in\t",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/dev/Logparser"
+	],
+	"file_history":
+	[
+		"/C/Users/l.deparis/AppData/Roaming/Sublime Text 3/Packages/User/Log Highlight.tmLanguage",
+		"/C/Users/l.deparis/AppData/Roaming/Sublime Text 3/Packages/User/Log Highlight.hidden-tmTheme",
+		"/C/Users/l.deparis/AppData/Roaming/Sublime Text 3/Packages/User/Log Highlight.sublime-settings",
+		"/C/temp/subl",
+		"/C/Users/l.deparis/OneDrive - Parrot Group/share/with PIX4D/ANAFI THERMAL PIX4D/exitool - parrot/readme..txt",
+		"/C/Users/l.deparis/Downloads/certificate/PI040416AA8D000834/t.txt",
+		"//securesharepoint.parrot.biz@SSL/DavWWWRoot/anafimil/Documents/13_Production/pro/PI040416BA8H085722.pro.sig",
+		"/C/Users/l.deparis/Downloads/LOIC-2019-03-29/pro/PI040416AA8G045901.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/M25NJBYO/PI040416AA8E001146xFFEF.pro.sig",
+		"/C/Users/l.deparis/Downloads/certificate/PI040445P29C000135/PI040445P29C000135x1ff.pro.sig",
+		"/C/Users/l.deparis/Downloads/certificate/PI040445P29C00012.pro.sig",
+		"/C/Users/l.deparis/Downloads/certificate/PI040445P29C000135/PI040445P29C000135se_pwr.pro.sig",
+		"/C/Users/l.deparis/Downloads/certificate/PI040445P29C000135unpro.pro.sig",
+		"/C/Users/l.deparis/Downloads/certificate/PI040445P29C000135.pro.sig",
+		"/C/Users/l.deparis/Downloads/testexiftool/exiftool/README",
+		"/C/Users/l.deparis/AppData/Roaming/Sublime Text 3/Packages/Log Highlight/Log Highlight.sublime-settings",
+		"/C/Users/l.deparis/AppData/Roaming/Sublime Text 3/Packages/User/CTRL_PARROT2.yaml-tmLanguage.yaml",
+		"/C/dev/Logparser/main.py",
+		"/D/PI040416AA8D000868.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/M25NJBYO/cpu.txt",
+		"/C/Users/l.deparis/Downloads/laurent/anafi-se-cert/pro/PI040416AA8H084643.pro.sig",
+		"/C/Users/l.deparis/Downloads/laurent/anafi-se-cert/pro/PI040416BA8G060394.pro.sig",
+		"/C/Users/l.deparis/Downloads/PI040440P9A000041/se_factory/PI040440P9A000041.pro.sig",
+		"/C/Users/l.deparis/Downloads/anafi-se-cert/debug/PI040440P9A000041.debug.sig",
+		"//securesharepoint.parrot.biz@SSL/DavWWWRoot/anafimil/Documents/13_Production/debug/PI040416AA8E000989.debug.sig",
+		"//securesharepoint.parrot.biz@SSL/DavWWWRoot/anafimil/Documents/13_Production/pro/PI040416AA8E000989.pro.sig",
+		"/C/Users/l.deparis/Downloads/debug/PI040416AA8E000989L.debug.sig",
+		"/C/Users/l.deparis/Downloads/persistent/PI040416AA8E000989x1ffL.pro.sig",
+		"/C/Users/l.deparis/Downloads/PI040416AA8E000989_3.debug.sig",
+		"/C/Users/l.deparis/Downloads/PI040416AA8E000989old.debug.sig",
+		"/C/Users/l.deparis/Downloads/989_2.debug.sig",
+		"/C/Users/l.deparis/Downloads/PI040416AA8E000989f2.debug.sig",
+		"/C/Users/l.deparis/Downloads/PI040416AA8E000989.sig",
+		"/C/Users/l.deparis/Downloads/989.sig",
+		"/C/Users/l.deparis/Downloads/PI040416AA8E000989.debug.sig",
+		"/D/PI040416AA8D000868x1ff.pro.sig",
+		"/C/Users/l.deparis/Documents/certif/se_pwr/PI040416AA8D000868_1ff.pro.sig",
+		"/C/Users/l.deparis/Documents/certif/se_factory/PI040416AA8D000868.pro.sig",
+		"/C/Users/l.deparis/Documents/certif/se_pwr/PI040416AA8D000868.pro.sig",
+		"/C/Users/l.deparis/Documents/certif/unpro/PI040416AA8D000868.pro.sig",
+		"/C/Users/l.deparis/Downloads/anafi-se-cert/se_pwr/PI040416AA8D000868.pro.sig",
+		"/C/dev/exifextract/Exify/k.kml",
+		"/C/dev/exifextract/Exify/k_orig.kml",
+		"/C/dev/exifextract/.gitignore",
+		"/C/dev/exifextract/Exify/TestExifLib.py",
+		"/C/dev/exifextract/Exify/ExifLib.py",
+		"/C/Users/l.deparis/AppData/Roaming/Sublime Merge/Packages/User/Commit Message.sublime-settings",
+		"/C/Users/l.deparis/Documents/PI040445D18K000005.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/M25NJBYO/conf_axel_plus_hall.json",
+		"/C/Users/l.deparis/AppData/Local/Temp/Temp1_PI040416BA_100_20190226 (002).zip/PI040416BA8K103235.pro.sig",
+		"/C/dev/exifextract/Exify/Kml.py",
+		"/C/Users/l.deparis/AppData/Local/Temp/Temp1_PI040416BA_100_20190226 (003).zip/PI040416BA8K103235.pro.sig",
+		"/C/Users/l.deparis/Documents/150m/PI040416BA8H084116.pro.sig",
+		"/C/Users/l.deparis/Documents/150m/PI040416BA8I093879.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/M25NJBYO/PI040416AA8E000989.pro.sig",
+		"//securesharepoint.parrot.biz@SSL/DavWWWRoot/anafimil/Documents/13_Production/pro/PI040416BA8H085769.pro.sig",
+		"/C/dev/exifextract/Exify/k.xml",
+		"/C/Users/l.deparis/Downloads/KML_Samples.kml",
+		"/C/Users/l.deparis/OneDrive - Parrot Group/share/with PIX4D/ANAFI THERMAL PIX4D/Readme.txt",
+		"/C/Users/l.deparis/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-settings",
+		"/C/dev/exifextract/test.py",
+		"/C/dev/exifextract/test/exiflib_test.py",
+		"/C/dev/exifextract/Exify/__init__.py",
+		"/C/dev/exifextract/exif.py",
+		"/C/dev/exifextract/test/__init__.py",
+		"/C/dev/exifextract/__init__.py",
+		"/C/dev/exifextract/lib/ExifLib.py",
+		"//securesharepoint.parrot.biz@SSL/DavWWWRoot/anafimil/Documents/13_Production/pro/PI040416AA8G047168.pro.sig",
+		"//securesharepoint.parrot.biz@SSL/DavWWWRoot/anafimapper/Documents/13_Production/0x001/PI040416AA8G036883.pro.sig",
+		"/F/anafi-se-cert/debug/PI040416BA8H079650.debug.sig",
+		"/C/temp/circular/pix4D/Project 32/Mission 1/details.pix4dcapture-mission",
+		"/C/dev/exifextract/exifextract.py",
+		"/C/dev/exifextract/eggs.csv",
+		"/C/dev/exifextract/lib/taglist.md",
+		"/C/temp/circular/pix4D/Project 32/Mission 1/dataflash.log",
+		"/C/Users/l.deparis/OneDrive - Parrot Group/share/ADB/android_winusb.inf",
+		"/C/Users/l.deparis/OneDrive - Parrot Group/validation/2018-09-05/circular1/circular 1/Pix4D/ctrl_parrot_2.log",
+		"/C/Users/l.deparis/OneDrive - Parrot Group/validation/2018-09-05/essai mavlink/ctrl_parrot_2.log",
+		"/D/PI040416P38D000282.sig",
+		"/C/Users/l.deparis/AppData/Local/Temp/Temp1_PI040416BA_100_20190226.zip/PI040416BA8K103235.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Temp/Temp1_PI040416BA_100_20190226.zip/PI040416BA8K103313.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Temp/Temp1_PI040416BA_100_20190226.zip/PI040416BA8K103399.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Temp/Temp1_0x001.zip/PI040416BA8K103235.pro.sig",
+		"/F/BA/PI040416AA8G036883.pro.sig",
+		"/F/BA/PI040416BA8K104230.pro.sig",
+		"/F/0x001/PI040416AA8G036883.pro.sig",
+		"/C/temp/t.txt",
+		"/C/temp/curli.bat",
+		"/C/temp/tt.bat",
+		"/C/Users/l.deparis/curli.bat",
+		"/C/Users/l.deparis/devnode/anafitool/test/test.js",
+		"/C/Users/l.deparis/devnode/anafitool/lib/FW.js",
+		"/C/temp/pyAnafi/Menu.py",
+		"//securesharepoint.parrot.biz@SSL/DavWWWRoot/anafimil/Documents/13_Production/pro/PI040416AA8G036891.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/M25NJBYO/PI040416BA8H085759.pro.sig",
+		"/C/Users/l.deparis/AppData/Local/Microsoft/Windows/Temporary Internet Files/Content.Outlook/M25NJBYO/PI040416AA8G036913.pro.sig",
+		"/C/temp/gprop.bat",
+		"/C/temp/PowerOff.bat",
+		"/C/temp/LogOff.bat",
+		"/C/temp/PowerOn.bat",
+		"/C/temp/LogOn.bat",
+		"/C/temp/init.bat",
+		"/C/temp/LedOff.bat",
+		"/C/temp/LedOn.bat",
+		"/C/temp/pre_se.bat",
+		"/C/Users/l.deparis/devnode/anafitool/package.json",
+		"/C/Users/l.deparis/devnode/anafitool/app.js",
+		"/C/Users/l.deparis/devnode/anafitool/lib/t.txt",
+		"/C/Users/l.deparis/devnode/anafitool/views/index.pug",
+		"/C/Users/l.deparis/devnode/anafitool/views/layout.pug",
+		"/C/Users/l.deparis/devnode/anafitool/test.js",
+		"/C/Users/l.deparis/devnode/anafitool/routes/flashAnafi.js",
+		"/C/Users/l.deparis/devnode/anafitool/lib/test.js",
+		"/C/Users/l.deparis/devnode/anafitool/routes/index.js",
+		"/C/Users/l.deparis/devnode/anafitool/views/SE.pug",
+		"/D/PI040416BA8H084277.sig",
+		"/D/PI040416BA8H084277.debug.sig",
+		"/D/PI040416AA8E001491.sig",
+		"/F/PI040416AA8E001491.pro.sig",
+		"/D/certif/PI040416AA8D000868.pro.sig",
+		"/C/Users/l.deparis/OneDrive - Parrot Group/tools/ADB pour WIN7/usb_driver/android_winusb.inf",
+		"/C/temp/remove_se.bat",
+		"/C/Users/l.deparis/Downloads/release_note.md",
+		"/C/Users/l.deparis/Downloads/android_winusb_new.inf",
+		"/C/Users/l.deparis/Downloads/usb_driver/android_winusb.inf",
+		"/D/certif/PI040416AA8D000868.log.pro.sig",
+		"/C/Program Files (x86)/ClockworkMod/Universal Adb Driver/usb_driver/android_winusb.inf",
+		"/C/Program Files (x86)/ClockworkMod/Universal Adb Driver/usb_driver/androidwinusba64.cat"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 121.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\dev\\Logparser"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 232.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.loghighlight":
+	{
+		"height": 184.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 176.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
