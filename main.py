@@ -3,9 +3,10 @@ from PyQt5.QtWidgets import QApplication, QWidget , QLabel , QToolTip , QPushBut
 from PyQt5.QtCore import QRegExp
 from PyQt5.QtGui import QIcon, QFont, QTextDocument, QTextCursor
 import os,re
+from PyQt5 import QtCore
 
 class App(QWidget):
- 
+    keyPressed = QtCore.pyqtSignal(QtCore.QEvent)
     def __init__(self):
         super().__init__()
         self.title = 'LogParser'
@@ -16,6 +17,7 @@ class App(QWidget):
         self.height = 480
         self.openlog('t.log')
         self.initUI()
+        self.keyPressed.connect(self.on_key)
     
     def initUI(self):
         self.setWindowTitle(self.title)
@@ -29,6 +31,7 @@ class App(QWidget):
         
         self.le = QLineEdit()
         self.btn = QPushButton("Filter")
+  
         self.btn.clicked.connect(self.getFilter)  
         layout.addWidget(self.le,0,0)
         layout.addWidget(self.btn,0,1)
@@ -47,11 +50,23 @@ class App(QWidget):
         self.setWindowTitle('Tooltips')    
         self.show()
 
-        
-    def getFilter(self):
+
+    def keyPressEvent(self, event):
+        super().keyPressEvent(event)
+        self.keyPressed.emit(event) 
+
+    def on_key(self, event):
+        if event.key() == QtCore.Qt.Key_Enter:
+            self.getFilter()  # this is called whenever the continue button is pressed
+        elif event.key() == QtCore.Qt.Key_Q:
+            print("Killing")
+            self.deleteLater()  # a test I implemented to see if pressing 'Q' would close the window
+
+    def getFilter_old(self):  
+      """ negate filter """
       tt=QTextDocument(self.le.text())
       # lRe=QRegExp("^((?!look).)*$")#self.le.text())
-      # print("^((?!{0}).)*$".format(tt.toPlainText()))
+      print("^((?!{0}).)*$".format(tt.toPlainText()))
       lRe=QRegExp("^((?!{0}).)*$".format(tt.toPlainText()))#self.le.text())
       lDoc=QTextDocument(self.qTE.document().toPlainText())
 
@@ -62,7 +77,7 @@ class App(QWidget):
       EndDocCursor=QTextCursor(lDoc)
       EndDocCursor.movePosition(QTextCursor.End)
       EndDocCursorPos=EndDocCursor.position()
-      # print(lCursor.position(), EndDocCursorPos)
+
 
       while lCursor.position()< EndDocCursorPos :
         lCursor.movePosition(QTextCursor.NextBlock,QTextCursor.KeepAnchor)
@@ -70,7 +85,60 @@ class App(QWidget):
         lCursor=lDoc.find(lRe)
         EndDocCursor.movePosition(QTextCursor.End)
         EndDocCursorPos=EndDocCursor.position()
-        # print(lCursor.position(), EndDocCursorPos)
+
+      self.qTEout.setDocument(lDoc)
+    
+    def getFilter(self):
+      """ positive filter"""
+      tt=QTextDocument(self.le.text())
+      # lRe=QRegExp("^((?!look).)*$")#self.le.text())
+      # print("{0}".format(tt.toPlainText()))
+      lRe=QRegExp("{0}".format(tt.toPlainText()))#self.le.text())
+      lDoc=QTextDocument(self.qTE.document().toPlainText())
+
+      # ^.+?(?=look)  jusqu'au mot look
+      # ^((?!look).)*$   lines not containing look
+
+      # lCursor=lDoc.find(lRe)
+      EditCursor=QTextCursor(lDoc)
+      
+      #Remove first REgex
+      lCursor=lDoc.find(lRe)
+      EditCursor.setPosition(lCursor.position(),QTextCursor.KeepAnchor)
+      EditCursor.movePosition(QTextCursor.EndOfLine,QTextCursor.KeepAnchor)
+      EndLine=EditCursor.position()
+      EditCursor.movePosition(QTextCursor.StartOfLine,QTextCursor.KeepAnchor)
+      StartLine=EditCursor.position()
+      # print("step1 :", lCursor.position(),EditCursor.anchor(),EditCursor.position())
+      EditCursor.removeSelectedText();
+
+      #Remove other Regex
+      StartPos=EndLine-StartLine+1
+      # print("StartPos ",StartPos)
+      lCursor=lDoc.find(lRe,StartPos)
+      EditCursor.setPosition(StartPos)
+      while lCursor.position()>0:
+
+        EditCursor.setPosition(lCursor.position(),QTextCursor.KeepAnchor)
+        EditCursor.movePosition(QTextCursor.EndOfLine,QTextCursor.KeepAnchor)
+        EndLine=EditCursor.position()
+        EditCursor.movePosition(QTextCursor.StartOfLine,QTextCursor.KeepAnchor)
+        StartLine=EditCursor.position()
+        
+        # print("step2 :", lCursor.position(),EditCursor.anchor(),EditCursor.position())
+        EditCursor.removeSelectedText();
+
+        StartPos=EndLine-StartLine +1+StartPos
+        # print("StartPos ",StartPos)
+        lCursor=lDoc.find(lRe,StartPos)
+        EditCursor.setPosition(StartPos)
+        # print(lCursor.position())
+      
+      # remove after regex
+      EditCursor.setPosition(StartPos)
+      EditCursor.movePosition(QTextCursor.End,QTextCursor.KeepAnchor)
+      # print(EditCursor.position(), EditCursor.anchor())
+      EditCursor.removeSelectedText();
 
       self.qTEout.setDocument(lDoc)
     def closeEvent(self, event):
