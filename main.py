@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget , QLabel , QToolTip , QPushButton , QMessageBox, QTextEdit, QFormLayout, QLineEdit,QInputDialog
+from PyQt5.QtWidgets import QApplication, QWidget , QLabel , QToolTip , QPushButton , QMessageBox, QTextEdit, QGridLayout, QLineEdit,QInputDialog
 from PyQt5.QtGui import QIcon, QFont, QTextDocument
 import os
 
@@ -15,6 +15,7 @@ class App(QWidget):
         self.height = 480
         self.openlog('t.log')
         self.initUI()
+    
     def initUI(self):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
@@ -23,19 +24,37 @@ class App(QWidget):
         self.setToolTip('This is a <b>QWidget</b> widget')
         
         # self.SourceDoc=QTextDocument("")  
+        layout = QGridLayout()
+        
+        self.le = QLineEdit()
+        self.btn = QPushButton("Filter")
+        self.btn.clicked.connect(self.getFilter)  
+        layout.addWidget(self.le,0,0)
+        layout.addWidget(self.btn,1,0)
+          
         self.qTE=QTextEdit(self)
+        layout.addWidget(self.qTE,0,0,5,2)  
+
+        self.setLayout(layout)
         self.qTE.acceptDrops=True
-        self.qTE.setGeometry(0, 0, self.frameGeometry().width(), self.frameGeometry().height()-100)
         self.qTE.setDocument(self.SourceDoc)
-        self.qTE.show()
+
 
         self.setWindowTitle('Tooltips')    
         self.show()
 
-        self.show()
-        self.IDD=inputdialogdemo(self)
-        self.IDD.show()
         
+    def getFilter(self):
+      print(self.le.text())
+      tt=QTextDocument(self.le.text())
+      self.qTE.setDocument(tt)
+        # items = ("C", "C++", "Java", "Python")
+          
+      # item, ok = QInputDialog.getItem(self, "select input dialog", 
+      #   "list of languages", items, 0, False)
+              
+      # if ok and item:
+      #   self.le.setText(item)
     def closeEvent(self, event):
         
         # reply = QMessageBox.question(self, 'Message',
@@ -73,14 +92,6 @@ class inputdialogdemo(QWidget):
         
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = App()
-
-    # w = QWidget()
-    # w.resize(250, 150)
-    # w.move(300, 300)
-    # w.setWindowTitle('Simple')
-    # w.show()
-
-
-    sys.exit(app.exec_())
+  app = QApplication(sys.argv)
+  ex = App()
+  sys.exit(app.exec_())
